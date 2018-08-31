@@ -2,9 +2,13 @@
 
 The `Network-Socket-API` (NSAPI) provides a TCP/UDP API on top of any IP based network interface. With the NSAPI, you can write applications and libraries that use TCP/UDP Sockets without regard to the type of IP connectivity. In addition to providing the TCP/UDP API, the NSAPI also includes virtual base classes for the different IP interface types.
 
+The `Network-Socket-API` (NSAPI) 는 여러 다른 IP 기반 인터페이스 상에서 TCP/UDP API 제공한다. NSAPI를 가지고, 하위 IP 연결 인터페이스 고려 없이 TCP/UDP 소켓을 사용하여 응용 프로그램이나 라이브러리를 구현할 수 있다. 추가적으로 NSAPI는 여러 다른 IP 인터페이스 타입을 위한 virtual base classes 도 제공한다.
+
 ## Class hierarchy
 
-All network-socket API implementations inherit from two classes: a [`NetworkStack`](https://docs.mbed.com/docs/mbed-os-api/en/mbed-os-5.2/api/classNetworkStack.html) and a communication-specific subclass of [`NetworkInterface`](https://docs.mbed.com/docs/mbed-os-api/en/mbed-os-5.4/api/classNetworkInterface.html).
+All network-socket API implementations inherit from two classes: 
+모든 network-socket API 는 2개의 class로 부터 상속된다 :
+a [`NetworkStack`](https://docs.mbed.com/docs/mbed-os-api/en/mbed-os-5.2/api/classNetworkStack.html) and a communication-specific subclass of [`NetworkInterface`](https://docs.mbed.com/docs/mbed-os-api/en/mbed-os-5.4/api/classNetworkInterface.html).
 
 ### `NetworkInterface` class
 
