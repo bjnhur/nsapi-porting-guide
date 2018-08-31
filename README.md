@@ -8,6 +8,7 @@ The `Network-Socket-API` (NSAPI) 는 여러 다른 IP 기반 인터페이스 상
 
 All network-socket API implementations inherit from two classes: 
 모든 network-socket API 는 2개의 class로 부터 상속된다 :
+
 a [`NetworkStack`](https://docs.mbed.com/docs/mbed-os-api/en/mbed-os-5.2/api/classNetworkStack.html) and a communication-specific subclass of [`NetworkInterface`](https://docs.mbed.com/docs/mbed-os-api/en/mbed-os-5.4/api/classNetworkInterface.html).
 
 ### `NetworkInterface` class
@@ -24,9 +25,13 @@ There are three [pure virtual methods](https://en.wikipedia.org/wiki/Virtual_fun
 
 Each subclass has distinct pure virtual methods. Visit their class references (linked above) to determine those you must implement.
 
+각 하위 클래스는 위 3가지 메소드를 구현해야 한다.
+
 ### `NetworkStack` class
 
 `NetworkStack` provides a common interface that hardware shares. It can connect to a network over IP. By implementing the `NetworkStack`, you can use a class as a target for instantiating network sockets.
+
+`NetworkStack`은 IP 네트워크에 연결할 수 있는 공통 인터페이스를 제공한다. 
 
 `NetworkStack` provides [these functions](https://docs.mbed.com/docs/mbed-os-api/en/mbed-os-5.4/api/classNetworkStack.html). Look for the function signature like this: [`declarator virt-specifier(optional) = 0`](http://en.cppreference.com/w/cpp/language/abstract_class) to determine which functions are pure virtual, and must be overridden in your child class.
 
